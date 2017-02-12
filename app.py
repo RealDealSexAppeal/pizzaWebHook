@@ -15,7 +15,7 @@ from flask import make_response
 app = Flask(__name__)
 
 
-@app.route('/webhook', methods=['POST'])
+@app.route('', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
 
@@ -23,10 +23,10 @@ def webhook():
     print(json.dumps(req, indent=4))
 
     res = {
-        "speech": "Lick my booty",
-        "displayText": "Lick my booty",
-        # "data": data,
-        # "contextOut": [],
+ 		"speech": "poop",
+        "displayText": "otherpoop",
+        "data": "",
+        "contextOut": [],
         "source": "pizza-webhook-sample"
     }
 
@@ -35,6 +35,14 @@ def webhook():
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
     return r
+
+
+if __name__ == '__main__':
+    port = int(os.getenv('PORT', 5000))
+
+    print("Starting app on port %d" % port)
+
+    app.run(debug=False, port=port, host='0.0.0.0')
 
 
 # def processRequest(req):
@@ -97,13 +105,6 @@ def webhook():
 #         "displayText": speech,
 #         # "data": data,
 #         # "contextOut": [],
-#         "source": "pizza-webhook-sample"
+#         "source": "apiai-weather-webhook-sample"
 #     }
 
-
-if __name__ == '__main__':
-    port = int(os.getenv('PORT', 5000))
-
-    print("Starting app on port %d" % port)
-
-    app.run(debug=False, port=port, host='0.0.0.0')
