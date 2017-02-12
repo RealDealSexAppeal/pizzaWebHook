@@ -1,7 +1,7 @@
 {
-  "name": "API.AI webhook demonstration",
+  "name": "pizzawebhook",
   "description": "API.AI webhook demonstration",
-  "repository": "https://github.com/api-ai/apiai-weather-webhook-sample",
-  "logo": "http://xvir.github.io/img/apiai.png",
+  "repository": "https://github.com/RealDealSexAppeal/pizzaWebHook",
+  "logo": "http://pepe-the-frog.wikia.com/wiki/File:Sad_Pepe.png",
   "keywords": ["api.ai", "natural language"]
 }
